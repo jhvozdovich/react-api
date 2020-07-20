@@ -13,7 +13,7 @@ class Headlines extends React.Component {
     const { error, isLoaded, headlines } = this.props;
     if (error) {
       return <React.Fragment>Error: {error.message}</React.Fragment>;
-    } else if (!isLoaded) {
+    } else if (isLoaded) {
       return <React.Fragment>Loading...</React.Fragment>;
     } else {
       return (
